@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inc Name:index</title>
+    <title>Chia-An's Website |楊佳安個人作品網站</title>
+    <link rel="icon" href="img/icons/browser.svg">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/pattern.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/plug-in/jquery.localizationTool.css">
 </head>
 <body>
 <!-- start nav section -->
     <nav>
         <div class="container">
-        <div class="nav-top">
+        <div class="nav-top" style="display: none;">
             <!-- nav when scrolling -->
             <img class="logo2" src="img/Logo/malton-horizontal_2.PNG" alt="">
             <ul class="row d-none d-lg-flex d-md-flex">
-                <li class="col-lg-2 col-md-2 "><a href="#">Home</a></li>
-                <li class="col-lg-2 col-md-2 "><a href="#">About us</a></li>
-                <li class="col-lg-3 col-md-3 "><a href="#">Order now</a></li>
-                <li class="col-lg-2 col-md-2 "><a href="#">Locations</a></li>
-                <li class="col-lg-1 col-md-1 "><a href="#">En</a></li>
-                <li class="col-lg-2 col-md-2 "><a href="#">中文</a></li>
+                <li class="col-lg-2 col-md-2 "><a href="#">首頁</a></li>
+                <li class="col-lg-2 col-md-2 "><a href="#">個人履歷</a></li>
+                <li class="col-lg-3 col-md-3 "><a href="#">網頁技能</a></li>
+                <li class="col-lg-2 col-md-2 "><a href="#">多語算字數</a></li>
+             
             </ul>
             <div class="frame_btn">
                 <p>FB</p><p>IG</p>
@@ -31,12 +32,11 @@
             <!-- nav-scroll hamburger -->
             <div class="frame_ham col-sm-2 col-3 d-lg-none d-md-none d-sm-flex d-flex order-last ">
                 <ul class="no-gutters flex-column">
-                    <li class="col d-block"><a href="#">Home</a></li>
-                    <li class="col d-block"><a href="#">About us</a></li>
-                    <li class="col d-block"><a href="#">Order now</a></li>
-                    <li class="col d-block"><a href="#">Locations</a></li>
-                    <li class="col d-block"><a href="#">English</a></li>
-                    <li class="col d-block"><a href="#">中文</a></li>
+                    <li class="col d-block"><a href="index.html">首頁</a></li>
+                    <li class="col d-block"><a href="about.html">個人履歷</a></li>
+                    <li class="col d-block"><a href="products.html" title="CodePen作品">作品-網頁技能</a></li>
+                    <li class="col d-block"><a title="多國語言字數計算" href="https://xqyhhzybtiba8aiw1kwzug-on.drv.tw/Public%20Folder/Multi-Language-WordCounter/counter.html">作品-多國語言計算機</a></li>
+                
                     <li class="close-btn col d-block">X Close Menu</li>
                 </ul>
                 <img src="img/icons/ham.svg" alt="Hamburger">
@@ -44,19 +44,17 @@
         </div>
         
         <div class="row nav-btm">           
-            <img class="logo" src="img/Logo/malton_3.PNG" alt="">
+            <img class="logo" src="img/Logo/malton_3.PNG" alt=""><div id="selectLanguageDropdown" class="localizationTool"></div>
             <div class="frame_btn col-lg-2 col-md-2 col-sm-3 col-4">
                 <p>FB</p><p>IG</p>
             </div>
             <!-- nav hamburger -->
             <div class="frame_ham mr-4 col-sm-1 col-8 d-lg-none d-md-none d-sm-flex d-flex order-last ">
                 <ul class="no-gutters flex-column">
-                    <li class="col d-block"><a href="index.html">Home</a></li>
-                    <li class="col d-block"><a href="#">About us</a></li>
-                    <li class="col d-block"><a href="products.html">Order now</a></li>
-                    <li class="col d-block"><a href="location.html">Locations</a></li>
-                    <li class="col d-block"><a href="#">English</a></li>
-                    <li class="col d-block"><a href="#">中文</a></li>
+                    <li class="col d-block"><a href="index.html">首頁</a></li>
+                    <li class="col d-block" ><a href="about.html">個人履歷</a></li>
+                    <li class="col d-block"><a href="products.html" title="CodePen作品">作品-網頁技能</a></li>
+                    <li class="col d-block"><a title="作品-多國語言字數計算" href="https://xqyhhzybtiba8aiw1kwzug-on.drv.tw/Public%20Folder/Multi-Language-WordCounter/counter.html">作品-多國語言計算機</a></li>
                     <li class="close-btn col d-block">X Close Menu</li>
                 </ul>
                 <img src="img/icons/ham.svg" alt="Hamburger">
@@ -65,12 +63,12 @@
         </div>
         <!-- nav on top -->
         <ul class="row nav-btm ">
-            <li class="col-lg-2 col-md-2 d-none d-lg-block d-md-block"><a href="#">Home</a></li>
-            <li class="col-lg-2 col-md-2 d-none d-lg-block d-md-block"><a href="#">About us</a></li>
-            <li class="col-lg-2 col-md-2 d-none d-lg-block d-md-block"><a href="#">Order now</a></li>
-            <li class="col-lg-2 col-md-2 d-none d-lg-block d-md-block"><a href="#">Locations</a></li>
-            <li class="col-lg-2 col-md-2 d-none d-lg-block d-md-block"><a href="#">English</a></li>
-            <li class="col-lg-2 col-md-2 d-none d-lg-block d-md-block"><a href="#">中文</a></li>
+            <li class="col-lg-3 col-md-3 d-none d-lg-block d-md-block"><a href="index.html">首頁</a></li>
+            <li class="col-lg-3 col-md-3 d-none d-lg-block d-md-block"><a href="about.html">個人履歷</a></li>
+            <li class="col-lg-3 col-md-3 d-none d-lg-block d-md-block"><a href="products.html">作品-網頁技能</a></li>
+            <li class="col-lg-3 col-md-3 d-none d-lg-block d-md-block"><a title="多國語言字數計算 (開新視窗)" 
+                href="https://xqyhhzybtiba8aiw1kwzug-on.drv.tw/Public%20Folder/Multi-Language-WordCounter/counter.html" 
+                target="_blank">作品-多國語言計算機</a></li>
         </ul>
 
     </div>
@@ -85,37 +83,37 @@
 </div>
 <section class="carasoul-txt-1 flyIn">
 <div class="container">
-    <h3>Sky's not the Limit</h3>
+    <h3>創新，沒有極限</h3>
     <span>
-        <p>This is a demo page for a company's homepage. Click the following button to head back. 這是企業首頁版型demo，點選下面按鈕返回我的作品 :)</p>
+        <p>這是企業首頁的切版設計，設計上運用專業感的藍紫色，以及高聳入雲的大廈塑造品牌的「創新、頂尖」形象。請點下面的按鈕看更多我的作品，或往下拉瀏覽完整頁面</p>
         <a href="products.html">
-            <div class="frame_btn"><p>Learn more</p></div>
+            <div class="frame_btn"><p>前往Chia-An佳安 的作品</p></div>
         </a> 
     </span>
 </div>
 </section>
 <section class="carasoul-txt-2">
 <div class="container">
-    <h3>Sep Special Offer</h3>
+    <h3>品牌創新，沒有極限</h3>
     <span>
-        <p>L Harum atque incidunt nisi a quidem, quo rem<br> repellendus reiciendis totam itaque.</p>
-        <div class="frame_btn"><p>Get Offer Now</p></div>
+        <p>這是企業首頁的設計範例<br>請點下面的按鈕看更多我的作品</p>
+        <div class="frame_btn"><p>前往Chia-An佳安 的作品</p></div>
     </span>
 </div>
 </section>
 <!-- end carasoul section -->
-<div class="wrapper pattern-triangles-sm">
+<div class="wrapper ">
     <section class="intro-1">
     <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 col-12 order-lg-first order-md-first order-last">
-                <h3 class="center">Leave entangled issue to us, save your valuable time.</h3>
+                <h3 class="center">專業診斷您的問題，解決您的一切阻礙</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, neque rerum? Dolorum fuga temporibus maxime sapiente nobis similique? Perspiciatis, voluptas.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi reiciendis sint itaque quas deleniti perspiciatis veniam iure. Ipsa quas nemo laudantium eaque molestiae aut est.</p>
-            </div>
-            <div class="col-lg-6 col-md-4 col-sm-12 col-12">
-                <img src="img/draw_2-needHelp.PNG" alt="">
-            </div>
+                 </div>
+                <div class="col-lg-6 col-md-4 col-sm-12 col-12">
+                    <img src="img/draw_2-needHelp.PNG" alt="">
+                </div>
         </div>
     </div>
     </section>    
@@ -123,7 +121,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-8 col-sm-12 col-12">
-                <h3 >Pursuming refined expertise.</h3>
+                <h3 >精湛品質，職人精神</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, neque rerum? Dolorum fuga temporibus maxime sapiente nobis similique? Perspiciatis, voluptas.</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi reiciendis sint itaque quas deleniti perspiciatis veniam iure. Ipsa quas nemo laudantium eaque molestiae aut est.</p>
             </div>
@@ -138,11 +136,11 @@
         <div class="container">
             <div class="row">
                 <ul class="footer-l col-lg-3 col-md-6 col-sm-6 col-12">
-                    <li class="np"><span>TEL</span> 0933-789-345</li>
-                    <li class="np"><span>Email</span> errti@gmail.com</li>
+                    <li class="np"><span>TEL</span> 0911-315-20</li>
+                    <li class="np"><span>Email</span>chiaan.y.creativeworker<br>@gmail.com</li>
                 </ul>
                 <ul class="footer-l col-lg-3 col-md-6 col-sm-6 col-12">
-                    <li><span>Address</span><br>No 4 Heping S Rd Daan Dist<br>Taipei Cit, Taiwan 90221</li>
+                    <li><span>Address</span><br>新北市板橋區稚暉街<br>48巷15號1樓C室</li>
                 </ul>
                 <img class="col-lg-3 col-md-6 col-sm-12 col-12 order-first order-lg-0 order-md-0 flex-grow-0" src="img/Logo/malton-horizontal_2.PNG" alt="">
                 <ul class="footer-r col-lg-3 col-md-6 col-sm-12 col-12">
@@ -157,8 +155,13 @@
         </div>
     </footer>
 </div> 
-<script src="js/jQuery/jquery-3.5.1.js"></script>   
-<script src="js/plug-in/slick.js"></script>   
+<script src="js/jQuery/jquery-3.5.1.js"></script>
+<script src="js/plug-in/jquery.localizationTool.js"></script>   
 <script src="js/customize.js"></script>   
+<script>
+                if (window.location.href.match(/localhost.*[/]demo/)) {
+                $("body").append('<div><a href="supportedLanguages.html">Preview Supported Languages</a></div>');
+            }
+</script>
 </body>
 </html>

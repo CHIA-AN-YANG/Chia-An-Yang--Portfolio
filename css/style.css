@@ -14,6 +14,7 @@ https://codepen.io/chia-an-yang/pen/bGpMVVq
 :root{
     --main-c: #4c31b7;
     --main-dk-c: #2b1b67;
+    --linear-c: linear-gradient(to right, #2b1b67 0%,#4c31bc 30%,#2b1b67 100%);
     --support-c: #a2a4d6;
     --support2-c: #dddbc5;
     --font-c: #555;
@@ -135,12 +136,12 @@ h3.center {
   h3.center:after {
     content: "";
     display: block;
-    height: 100%;
+    height: 90%;
     width: 0;
     border-left: 8px solid #a2a4d6;
     position: absolute;
-    top: 0;
-    left:-10px;
+    top: 10px;
+    left:-15px;
     margin: 0 auto;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
@@ -161,7 +162,7 @@ h3.center {
   a{
       text-decoration: none;
   }
-  a:link{
+  a:link,a:link:hover,a:link:active{
       color: inherit;
       line-height: 1.5rem;
   }
@@ -202,6 +203,8 @@ nav{
   }
   nav .nav-btm{
     justify-content: flex-end;
+    height:120px;
+    padding-top: 5px;
   }
   @media (max-width:576px){
     nav ul.nav-btm{
@@ -210,6 +213,9 @@ nav{
   }
   nav ul.nav-btm.row,nav .nav-top ul.row{
     height: 60px;
+  }
+  nav ul.nav-btm.row{
+    margin-top: 0;
   }
   nav .nav-top ul.row{
    margin-top: 0;
@@ -224,6 +230,13 @@ nav{
     color: var(--font-c);
     transition: var(--trans);
   }
+  nav .frame_ham > ul li a{
+    color: var(--font-c);
+  }
+  nav .nav-btm.row > li,nav .nav-top ul li a:hover,nav .nav-btm.row > li,nav .nav-top ul li a:active,nav .frame_ham > ul li a:hover,nav .frame_ham > ul li a:active{
+
+    color: var(--bg-c);
+  }
 
 
   ul.nav-btm > li::after{
@@ -233,17 +246,17 @@ nav{
     width: 20px;
     border-bottom: 5px solid #a2a4d6;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left:50%;
     transform: translateX(-50%);
     margin: 0 auto;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
   }
-  ul.nav-btm > li:hover{
+  /* ul.nav-btm  li:hover{
     color: var(--main-c);
     height: 50px;
-  }
+  } */
   nav .nav-btm .logo{
     position: absolute;
     left:50%;
@@ -265,7 +278,9 @@ nav{
     flex-grow:0;
     flex-shrink:0;
     margin-left: 10px;
-    color: var(--support-c);
+    color: var(--main-c);
+    border: 2px solid var(--main-c);
+    transition: 0.5s both;
   }
   .frame_btn p{
     display: block;
@@ -276,7 +291,12 @@ nav{
     border: 2px solid var(--support-c);
     text-align: center;
     cursor: pointer;
+    
   }
+  nav .frame_btn p:hover{
+    background-color: var(--support-c);
+  }
+
 nav .frame_ham > ul{
   margin-top: 0;
   position: absolute;
@@ -294,7 +314,7 @@ nav .frame_ham > ul{
 .frame_ham > ul.open{
 height:auto;
 width: 250px;
-padding: 10px 30px 30px 5px;
+padding: 10px 20px 5px 20px;
 background-color: rgba(238,238,238,0.8);
 }
 nav .frame_ham > ul li{
@@ -314,7 +334,7 @@ nav .frame_ham > ul li:last-child{
 }
 .frame_ham{
   flex: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   height:40px;
   width: 40px;
@@ -399,6 +419,7 @@ nav .frame_ham > ul li:last-child{
   .intro-1,.intro-2{
     flex:1;
     padding-top:50px;
+    min-height: 643px;
     padding-bottom: 150px;
   }
   .intro-1 img,.intro-2 img{
@@ -437,7 +458,7 @@ nav .frame_ham > ul li:last-child{
  footer{
    flex:1;
    height:200px;
-   background-color: var(--main-dk-c);
+   background: var(--linear-c);
    padding-top: 20px;
    padding-bottom: 50px;
    
@@ -451,7 +472,13 @@ nav .frame_ham > ul li:last-child{
     text-align: center;
    }
   }
+  footer{
+    height:300px;
+  }
 @media (max-width:768px){
+  footer{
+    height:450px;
+  }
   footer ul li{
 text-align: center;
    }
@@ -470,7 +497,15 @@ text-align: center;
    flex-direction: row;
    justify-content: flex-end;
  }
- @media (max-width:768px){
+ @media (max-width:540px){
+  footer{
+    height:600px;
+    padding-top: 10px;
+    padding-bottom: 20px; 
+  }
+  footer br{
+   display: none;
+  }
   .footer-r{
     justify-content: center;
    }
@@ -494,29 +529,20 @@ text-align: center;
   .wrapper.w_map section{
     padding-bottom: 150px;
     }
-nav.show{
+nav{
   width:100vw;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1);
   position: fixed;
   top:0;
 }
-nav.show .nav-top{
+nav .nav-top{
   visibility: visible;
   display: flex;
   width: 100%;
   height:60px;
-  /* overflow: hidden;  */
   background-color: #fff;
 }
-nav.show .nav-btm{
-  display:none;
-}
 
-nav.show ul li:after{
-  display: none;
-}
-nav.show .logo2{
+nav .logo2{
   flex:2;
   width: 120px;
   height: 48px;
@@ -524,13 +550,13 @@ nav.show .logo2{
   flex-grow: 0;
   margin-top: 8px;
 }
-nav.show ul{
+nav ul{
   flex:8;
 }
-nav.show .frame_btn{
+nav .frame_btn{
   flex:2;
 }
-nav.show .frame_btn p{
+nav .frame_btn p{
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -551,6 +577,16 @@ height: 400px;
   padding: 20px 20px;
   align-items: baseline;
 }
+@media (min-width:769px) and (max-width:992px){
+  .map h3{
+   font-size: 22px;
+  }
+}
+@media (max-width:768px){
+  .map h3{
+font-size: 18px;
+  }
+  }
 /* ==== products ==== */
 .product.wrapper{
   top:60px
@@ -625,6 +661,16 @@ letter-spacing: 2px;
   margin: 0;
   cursor: pointer;
 }
+@media (min-width:769px) and (max-width:992px){
+  .product-sec h3{
+   font-size: 24px;
+  }
+}
+@media (max-width:768px){
+  .product-sec h3{
+font-size: 18px;
+  }
+  }
 /* ==== about me ==== */
 /* cv section */
 .cv_wrapper{
@@ -643,8 +689,6 @@ letter-spacing: 2px;
 .cv_heading{
   position: relative;
   height:250px;
-  /* background-image: url(../img/CV_bg.jpg); */
-  /* background-size: cover; */
   background:linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);;
   text-align: center;
   padding-top:80px;
@@ -668,7 +712,7 @@ letter-spacing: 2px;
   height:175px;
   width:175px;
   border-radius: 50%;
-  background-color: var(--main-c);
+  background-color: rgb(45, 21, 53);
   
 }
 @media (max-width:768px){
@@ -686,8 +730,8 @@ letter-spacing: 2px;
   height:175px;
   width:175px;
   border-radius: 50%;
-  filter: grayscale(80%) brightness(110%);
-  mix-blend-mode: lighten;
+  filter: grayscale(100%) brightness(110%);
+  mix-blend-mode: luminosity;
   overflow: hidden;
   
 }
@@ -756,6 +800,9 @@ letter-spacing: 2px;
   margin-left: 1rem;
 }
 @media (max-width:768px){
+  .cv_body dl{
+    margin-left: 0;
+  }
   .cv_body dl dd{
     margin-left: 0;
   }
