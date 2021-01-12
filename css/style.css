@@ -306,7 +306,7 @@ nav .frame_ham > ul{
   width: 40px;
   overflow: hidden;
   border: 2px solid var(--support-c);
-  transition: var(--trans);
+  /* transition: All 0.3s ; */
   background-color: rgba(238,238,238,0);
 }
 
@@ -683,7 +683,9 @@ font-size: 18px;
   padding:0 0 50px;
 }
 .cv_wrapper h1{
-  color: var(--main-dk-c)
+  color: var(--main-dk-c);
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .cv_heading{
@@ -730,8 +732,8 @@ font-size: 18px;
   height:175px;
   width:175px;
   border-radius: 50%;
-  filter: grayscale(100%) brightness(110%);
-  mix-blend-mode: luminosity;
+  filter: brightness(110%);
+  mix-blend-mode: lighten;
   overflow: hidden;
   
 }
